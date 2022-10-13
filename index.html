@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+
+    <H1>SIGNUP</H1>
+
+    <input type="text" id="inp1" placeholder="Enter Username">
+    <br>
+    <br>
+    <input type="text" id="inp2" placeholder="Password">
+    <br>
+    <div id="print"></div>
+    <div id="main"></div>
+    <br>
+    <button type="submit" onclick="func()">Enter</button>
+    
+    <h2>Login</h2>
+    <input type="text" id="inp3" placeholder="Username">
+    <br>
+    <br>
+    <input type="text" id="inp4" placeholder="Password">
+    <br>
+    <div id="print"></div>
+    <br>
+    <button type="submit" onclick="log()">Login</button>
+
+
+
+    <script>
+  
+
+    function func(){    
+    var name = document.getElementById("inp1").value;
+    localStorage.setItem( "Namee", name);
+    
+    var pass = document.getElementById("inp2").value;
+    localStorage.setItem( "password", pass );
+    }
+
+    function log(){ 
+        var nme = document.getElementById("inp3").value;
+        var pas = document.getElementById("inp4").value;
+
+
+        if ( nme == localStorage.getItem("Namee") && pas == localStorage.getItem( "password" ) ) {
+           alert("Login Successfully")
+        }
+    }
+
+
+    </script>
+
+
+</body>
+</html> 
